@@ -6,7 +6,7 @@ for data exploration, cleaning, and reporting.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 SQL_Sales_analysis/
 │
 ├── datasets/ # Raw and cleaned sales datasets
@@ -17,7 +17,7 @@ SQL_Sales_analysis/
 
 ---
 
-## 🧠 Objectives
+##  Objectives
 
 - Clean and preprocess raw sales data using SQL.
 - Perform exploratory data analysis (EDA) using SQL queries.
@@ -25,7 +25,7 @@ SQL_Sales_analysis/
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 
 - **SQL** (MySQL)
 - **DBMS**: ( MySQL Workbench)
@@ -34,7 +34,7 @@ SQL_Sales_analysis/
 
 ---
 
-## 📌 SQL Techniques Used
+##  SQL Techniques Used
 
 - Joins (INNER, LEFT, RIGHT)
 - Aggregations (`SUM`, `AVG`, `COUNT`)
