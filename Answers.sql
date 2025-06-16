@@ -27,16 +27,16 @@ where
 and 
 	DATEPART(year, order_purchase_date)=2017;
 
--- Q4 Create a new column called ‘Week Period’ for every order purchase date.
+-- Q4 Create a new column called â€˜Week Periodâ€™ for every order purchase date.
 --Week period is defined as the date of Sunday to date of Saturday of the week in which the purchase date falls into. 
 --Ex. If the order purchase date is 11th May, it falls in the week 6th May to 12th May where 6th May is the Sunday of that week and 12th May is Saturday.
 
 select 
 	order_id, 
 	order_purchase_date,
-	dateadd(day,-datepart(weekday,order_purchase_date)-1,order_purchase_date),
+	DATEADD(DAY, 1 - DATEPART(WEEKDAY, order_purchase_date), order_purchase_date),
 	dateadd(day,(7-datepart(weekday,order_purchase_date)),order_purchase_date),
-	format(dateadd(day,-datepart(weekday,order_purchase_date)-1,order_purchase_date),'dd-MMM')+' To '+
+	format (DATEADD(DAY, 1 - DATEPART(WEEKDAY, order_purchase_date), order_purchase_date),'dd-MMM')+' To '+
 	format(dateadd(day,(7-datepart(weekday,order_purchase_date)),order_purchase_date),'dd-MMM') 
 as week
 from orders
